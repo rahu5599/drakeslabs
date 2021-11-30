@@ -44,7 +44,7 @@ $(function() {
                 border-radius: 10px;
                 width: 158px;
                 height: 48px;
-                text-align:center;
+                font-size:18px;
                 border:1px solid #2B2B2B;
             }
             .facebook{
@@ -56,6 +56,7 @@ $(function() {
                 text-align:center;
                 border:1px solid #2B2B2B;
             }
+         }
         </style>
         `;
         var logo = `
@@ -64,7 +65,7 @@ $(function() {
         </div>`;
         var qrbtn = `
               <div style="display:inline-block;"> 
-                <button type="button" class="qr">QR Login </button>
+                <button type="button" class="qr">QR Login &nbsp;<img src="https://miniorange.s3.amazonaws.com/public/images/customer-app-logos/255124/qr.png" alt="1" border="0"></button>
               </div>
         `;
 
