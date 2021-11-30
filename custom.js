@@ -46,6 +46,7 @@ $(function() {
                 height: 48px;
                 font-size:18px;
                 border:1px solid #2B2B2B;
+                
             }
             .facebook{
                 background: #2B2B2B;
@@ -55,6 +56,13 @@ $(function() {
                 height: 48px;
                 text-align:center;
                 border:1px solid #2B2B2B;
+
+            }
+            button#apple,
+            button#google {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
             }
          }
         </style>
@@ -101,9 +109,10 @@ $(function() {
             "border-bottom": "1px solid #FFFFFF",
             "background": "transparent",
             "width": "100%",
-            "padding": "8px 0 5px 0",
-            "font-size": "16px",
-            "color": "#fff"
+            "padding": "8px 4px",
+            "font-size": "19px",
+            "color": "#fff",
+            "outline":"none"
         });
 
         $("#passwordspan").removeClass();
@@ -115,9 +124,10 @@ $(function() {
             "border-bottom": "1px solid #FFFFFF",
             "background": "transparent",
             "width": "100%",
-            "padding": "8px 0 5px 0",
-            "font-size": "16px",
-            "color": "#fff"
+            "padding": "8px 4px",
+            "font-size": "19px",
+            "color": "#fff",
+            "outline":"none"
         });
         $("#plaintextPassword").removeClass();
         $("#plaintextPassword").prop("placeholder", "Password");
