@@ -64,7 +64,7 @@ $(function() {
         </div>`;
         var qrbtn = `
               <div style="display:inline-block;"> 
-                <button type="button" class="qr">QR Login <img style="padding-left:20px" src="https://miniorange.s3.amazonaws.com/public/images/customer-app-logos/255124/qr.png" alt="1" border="0"></button>
+                <button type="button" class="qr">QR Login <img style="float:right;padding: inherit;" src="https://miniorange.s3.amazonaws.com/public/images/customer-app-logos/255124/qr.png" alt="1" border="0"></button>
               </div>
         `;
 
