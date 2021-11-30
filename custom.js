@@ -44,7 +44,7 @@ $(function() {
                 border-radius: 10px;
                 width: 158px;
                 height: 48px;
-                font-size: 18px;
+                text-align:center;
                 border:1px solid #2B2B2B;
             }
             .facebook{
@@ -53,7 +53,7 @@ $(function() {
                 border-radius: 10px;
                 width: 50px;
                 height: 48px;
-                font-size: 18px;
+                text-align:center;
                 border:1px solid #2B2B2B;
             }
         </style>
