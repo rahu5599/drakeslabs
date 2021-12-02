@@ -225,7 +225,6 @@ $(function() {
             margin : 10px 0;
             /*padding-left: .75rem;*/
             padding-right: .75rem;
-            /**/
         }
 
         .idp-btn a {
