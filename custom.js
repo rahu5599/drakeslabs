@@ -16,8 +16,10 @@ $(function() {
     userAgent = window.navigator.userAgent.toLowerCase(),
     safari = /safari/.test( userAgent ),
     ios = /iphone|ipod|ipad/.test( userAgent );
-    if( ios && !standalone && !safari) {
-            var stylesheet = `
+
+    // if( ios && !standalone && !safari) {
+        if(true){
+                        var stylesheet = `
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
             `;
@@ -72,9 +74,7 @@ $(function() {
                 <img class="logo" src="https://i.ibb.co/XxgV330/Morphic-Logotype-2.png" alt="Morphic-Logotype-2" border="0">
             </div>`;
             var qrbtn = `
-                  <div style="display:inline-block;"> 
-                    <button type="button" class="qr">QR Login &nbsp;<img src="https://miniorange.s3.amazonaws.com/public/images/customer-app-logos/255124/qr.png" alt="1" border="0"></button>
-                  </div>
+                 
             `;
     
             var logif = `<div id="logif" style="background-color: black; padding: 20px;margin-top:30px"></div>`;
@@ -84,9 +84,7 @@ $(function() {
             var sociallogin = `
             <div style="text-align:center;background-color:black;width:100%;" id="social">
                 <p style="color:white;font-size:18px">Or Login with</p>
-                <button type="button" class="facebook" id="apple" ><img src="https://miniorange.s3.amazonaws.com/public/images/customer-app-logos/255124/apple.png"></i></button>
-                <button type="button" class="facebook" id="google" style="margin-left:10px"><img src="https://miniorange.s3.amazonaws.com/public/images/customer-app-logos/255124/google.png"></i></button>
-    
+
             </div>`;
             $("#login-wrapper").append(sociallogin);
             $("head").append(style);
@@ -94,6 +92,8 @@ $(function() {
             $("#logif").append(uname);
             $("#logif").append(password);
             $("#loginbutton").parent().parent().prepend(qrbtn);
+            $("#loginbutton").parent().parent().removeClass();
+            $(".container-fluid").removeClass();
             console.log("true");
             $("body").css({
                 "background-image": "url('https://miniorange.s3.amazonaws.com/public/images/customer-app-logos/255124/morphic-banner.png')",
@@ -116,8 +116,7 @@ $(function() {
             });
     
             $("#passwordspan").removeClass();
-            $("#passwordspan").addClass("col-md-8");
-    
+            
             $("#plaintextPassword").css({
                 "height": "4vh",
                 "border": "0",
@@ -132,26 +131,26 @@ $(function() {
             $("#plaintextPassword").removeClass();
             $("#plaintextPassword").prop("placeholder", "Password");
             $("#passwordspan").css({
-                "margin-top": "30px"
+                "margin-top": "45px"
             })
             $("#loginbutton").removeAttr("style");
             $("#loginbutton").css({
                 "background": "#FFFFFF",
                 "border-radius": "10px",
-                "width": "158px",
+                "width": "100%",
                 "height": "48px",
                 "font-size": "18px",
-                "padding-right":"60px"
+                "padding-right":"0px"
             });
             $("#userName").removeClass();
-            $("#userName").addClass("col-md-8");
             $("#username").removeClass();
             $("#loginbutton").removeClass();
     
             $("#loginbutton").parent().removeClass();
             $("#loginbutton").parent().css({
                 "display": "inline-block",
-                "padding-left": "10px"
+                "width":"100%",
+                "padding": "0px 13px 0px 14px"
             });
             $("#loginbutton").parent().parent().css({
                 "text-align": "center",
@@ -174,7 +173,8 @@ $(function() {
             var google1 = $("#google");
             var apple1 = $("#apple");
             $(appleBtn).append(apple1);
-            $(googleBtn).append(google1);    
+            $(googleBtn).append(google1);  
+            $(".row").removeClass();  
 } else {
    
     let fontFaceCSS = `<style type="text/css" media="screen, print">
@@ -271,15 +271,102 @@ $(function() {
     }
 
     .line-innertext {
-        background: black;
+        background: #3b3547;
         padding: 3px;
+        text-align:center;
     }
-   
+   input{
+    max-width: 480px !important;
+   }
+   .login-row {
+    margin: 32px auto;
+    max-width: 120.71429rem !important;
+    width: 100%;
+    }
+    .login-form{
+        width:38% !important;
+    }
+    .form-actions {
+        margin: 0 auto;
+        max-width: 85.71429rem;
+        width: 100%;
+        display: block;
+        text-align: left !important;
+    }
+    .button{
+        min-width: 241px !important;
+    }
+    .panel{
+        border: 1px solid;
+        margin-top: 40px;
+        border-radius: 30px;
+        padding: 55px;
+        max-width: 614px;
+        margin-left: 187px
+    }
+    li{
+        list-style-type: disc !important;
+    }
+    .new-customer-intro{
+        margin-top:40px !important;
+        font-size:16px;
+    }
+    .panel-title {
+        font-size: 30px !important;
+    }
+    .button{
+        background-color: #46c5e2 !important;
+        border-color:#46c5e2 !important;
+        font-size:16px !important;
+        color: #000 !important;
+    }
+    .form{
+        margin-left:120px !important;
+    }
+    @media (min-width: 551px){
+        .form-actions {
+            margin-top: 2.5rem !important ;
+        }        
+    }
+    .login-with-google-btn {
+        transition: background-color 0.3s, box-shadow 0.3s;
+        padding: 6px 16px 12px 42px;
+        border: none;
+        border-radius: 100px;
+        box-shadow: 0 -1px 0 rgb(0 0 0 / 4%), 0 1px 1px rgb(0 0 0 / 25%);
+        color: #757575;
+        font-size: 18px;
+        font-weight: 500;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTcuNiA5LjJsLS4xLTEuOEg5djMuNGg0LjhDMTMuNiAxMiAxMyAxMyAxMiAxMy42djIuMmgzYTguOCA4LjggMCAwIDAgMi42LTYuNnoiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGQ9Ik05IDE4YzIuNCAwIDQuNS0uOCA2LTIuMmwtMy0yLjJhNS40IDUuNCAwIDAgMS04LTIuOUgxVjEzYTkgOSAwIDAgMCA4IDV6IiBmaWxsPSIjMzRBODUzIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNNCAxMC43YTUuNCA1LjQgMCAwIDEgMC0zLjRWNUgxYTkgOSAwIDAgMCAwIDhsMy0yLjN6IiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNOSAzLjZjMS4zIDAgMi41LjQgMy40IDEuM0wxNSAyLjNBOSA5IDAgMCAwIDEgNWwzIDIuNGE1LjQgNS40IDAgMCAxIDUtMy43eiIgZmlsbD0iI0VBNDMzNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZD0iTTAgMGgxOHYxOEgweiIvPjwvZz48L3N2Zz4=);
+        background-color: white;
+        background-repeat: no-repeat;
+        background-position: 12px 11px;
+        width: 46%;
+      }
+      .login-with-google-btn:hover {
+        box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.25);
+      }
+      .login-with-google-btn:active {
+        background-color: #eeeeee;
+      }
+      .login-with-google-btn:focus {
+        outline: none;
+        box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.25), 0 0 0 3px #c8dafc;
+      }
+      .apple{
+          margin-left:30px;
+      }
+      .new-customer-fact{
+          padding:5px !important;
+      }
     
 </style>`;
+
     $("head").append(idpBtnCSS);
     $("head").append(fontFaceCSS);
-    let s = `<link data-stencil-stylesheet href="https://cdn11.bigcommerce.com/s-pqcep6tgku/stencil/d8819c60-d325-0139-0612-2a6a5a8672e9/e/85c3de40-ce60-0139-1e26-2646d15273da/css/theme-babdc9b0-d329-0139-1e5b-3a208d481fb5.css" rel="stylesheet">type="text/css" media="all" />    
+    let s = `<link data-stencil-stylesheet href="https://cdn11.bigcommerce.com/s-pqcep6tgku/stencil/d8819c60-d325-0139-0612-2a6a5a8672e9/e/85c3de40-ce60-0139-1e26-2646d15273da/css/theme-babdc9b0-d329-0139-1e5b-3a208d481fb5.css" rel="stylesheet">type="text/css" media="all" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
 `;
 
     $("head").append(s);
@@ -377,8 +464,7 @@ $(function() {
 
     $(navBar).insertBefore("#loading_image");
 
-
-
+   
     $("#hamburger-black,#hamburger-white").click(function() {
         $("#menu").removeClass("hidden");
     });
@@ -391,17 +477,46 @@ $(function() {
     $("#loginbutton").removeAttr("style");
     $("#loginbutton").parent("div").removeAttr("class").addClass("form-actions");
     $("#loginbutton").removeClass().addClass("button button--primary");
-
+    $("body").css({
+        "background-image":"url('https://localhost/demo_test/bg.png')",
+        "background-repeat":"no-repeat",
+        "background-attachment":"fixed",
+        "background-size":"cover",
+        
+    });
     $(".btn-link").parent().remove();
     var action = $('form').attr('action');
     console.log(action);
+    var welcome = `<p style="font-size:30px;margin-bottom:18px">Welcome Back</p>`;
+    var formCss = {
+        "border": "1px solid",
+        "padding-left": "54px",
+        "padding-top": "60px",
+        "padding-bottom": "50px",
+        "padding-right": "100px",
+        "border-radius":"30px"
+    }
+    $(".form").css(formCss);
+    $(".form").prepend(welcome);
+
+    if(action == '/moas/idplogin'){
+        var sociallogin = `
+        <div style="margin-top:30px" id="social">
+        <div class="line" style="text-align:center; margin-left: 75px;"><span class="line-innertext">Or Login with</span></div>
+        <button type="button" class="login-with-google-btn" >Sign in with Google</button>
+        <button type="button" style="border:1px solid;padding:10px;border-radius:40px; font-family:sans-serif;padding:10px 40px 10px 40px" class="apple" id="apple" ><i class="fa fa-apple" style="font-size: 20px;" aria-hidden="true"></i> Sign in with Apple</button>
+         </div>`;
+        $(".login-form").append(sociallogin);
+        $("a[href*='/moas/redirecttoidp'").remove();
+    }
     if (action == '/moas/userlogin') {
         $("body").hide();
         window.location.href = signinURL;
+         
     }
     if (!$("#inline-registration").length) {
 
-        var signInHeader = '<h1 class="page-heading" id="signin">Sign in</h1>';
+        var signInHeader = '<h1 class="" id="signin">&nbsp;</h1>';
         var forgetPass = '<h2 class="page-heading">Change Password</h2>';
         var resetpassword = '<h2 class="page-heading">Reset Password</h2>';
 
@@ -415,7 +530,8 @@ $(function() {
         $("#enduserloginform").addClass("login-form form");
 
         $("#userName").removeClass().addClass("form-field form-field--input form-field--inputEmail form-field--error");
-        $("#userName").prepend('<label class="form-label" for="login_email">Email Address:</label>');
+        $("#userName").prepend('<label class="form-label" for="login_email">Email Address</label>');
+        $("#passwordspan").prepend('<label class="form-label" for="login_email">Password</label>');
 
         // $(".form-inline").remove();
 
@@ -425,21 +541,19 @@ $(function() {
         let googleBtnHtml = `<i class="fa fa-google fa-fw"></i>` + googleBtn.find("button").text();
         googleBtn.find("button").remove();
         googleBtn.append(googleBtnHtml);
-        $("#enduserloginform").append('<div class="line"><span class="line-innertext">or</span></div>').append($(".idp-btn"));
-        $(`<div class="idp-btn" id="idpId-88">
-            <div class="col-xs-8 col-xs-offset-2">
-                    <a href="/moas/redirecttoidp?idpId=86&amp;customerId=51941" class="fb-btn"><i class="fa fa-facebook fa-fw"></i> Facebook</a>
-            </div>
-        </div>`).insertAfter(".line");
-        $("#loginbutton").parent("div").append('<a class="forgot-password" href="' + forgotPassURL + '">Forgot your password?</a>');
+        
+      
+        $("#loginbutton").parent("div").append('<a class="forgot-password" style="margin-top:10px;margin-left:25px;color:#46c5e2;" href="' + forgotPassURL + '">Forgot your password?</a>');
 
         let registrationText = `<div class="new-customer">
             <div class="panel">
-                <div class="panel-header">
+                <div class="">
                     <h2 class="panel-title">New Customer?</h2>
                 </div>
-                <div class="panel-body">
-                    <p class="new-customer-intro">Create an account with us and you'll be able to:</p>
+                <div class="">
+                    <br>
+                    <h2 class="" style="font-size: 24px;">Create an account with us and you'll be able to:</h2>
+                    <br>
                     <ul class="new-customer-fact-list">
                         <li class="new-customer-fact">Check out faster</li>
                         <li class="new-customer-fact">Save multiple shipping addresses</li>
@@ -447,12 +561,14 @@ $(function() {
                         <li class="new-customer-fact">Track new orders</li>
                         <li class="new-customer-fact">Save items to your Wish List</li>
                     </ul>
-                    <a href="` + signupURL + `"><button class="button button--primary">Create Account</button></a>
+                    <br>
+                    <a href="` + signupURL + `"><button class="button button--primary " style="margin-top: 75px;">Create Account</button></a>
                 </div>
             </div>
         </div>`;
         $(registrationText).insertAfter(".login-form");
-
+        $(".login").removeClass();
+     
         if (action == 'resetuserpassword') {
             var pass = `<p style="color:#fff">Fill in your email below to request a new password. An email will be sent to the address below containing a link to verify your email address.
             <br><br>
