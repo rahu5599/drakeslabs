@@ -19,7 +19,7 @@ $(function() {
 
     if( ios && !standalone && !safari) {
       
-                        var stylesheet = `
+            var stylesheet = `
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
             `;
@@ -85,8 +85,9 @@ $(function() {
             <div style="text-align:center;background-color:black;width:100%;" id="social">
                 <p style="color:white;font-size:18px">Or Login with</p>
                 <div style="display:inline">
-                    <button id="google" class="facebook"><img src='https://miniorange.s3.amazonaws.com/public/images/customer-app-logos/255124/google.png'/></button>
                     <button id="apple" class="facebook"><img src='https://miniorange.s3.amazonaws.com/public/images/customer-app-logos/255124/apple.png'/></button>
+                    <button id="google" class="facebook"><img src='https://miniorange.s3.amazonaws.com/public/images/customer-app-logos/255124/google.png'/></button>
+         
             
                 </div>
             </div>`;
