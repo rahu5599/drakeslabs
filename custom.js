@@ -84,7 +84,11 @@ $(function() {
             var sociallogin = `
             <div style="text-align:center;background-color:black;width:100%;" id="social">
                 <p style="color:white;font-size:18px">Or Login with</p>
-
+                <div style="display:inline">
+                    <button id="google" class="facebook"><img src='https://miniorange.s3.amazonaws.com/public/images/customer-app-logos/255124/google.png'/></button>
+                    <button id="apple" class="facebook"><img src='https://miniorange.s3.amazonaws.com/public/images/customer-app-logos/255124/apple.png'/></button>
+            
+                </div>
             </div>`;
             $("#login-wrapper").append(sociallogin);
             $("head").append(style);
@@ -158,8 +162,8 @@ $(function() {
             $("a[href='https://rahul3399.miniorange.in/moas/idp/usersignup']").remove();
             $("a[href*='moas/idp/resetpassword']").remove();
             var lernmore = `
-            <div class="" style="margin-top:40px;text-align:center;">
-                <p style="color:white;background-color:black;padding:15px;font-size:18px">Learn More</p>
+            <div class="" style="margin-top:40px;text-align:center;margin-left: 27%;">
+                <p style="color:white;background-color:black;padding:15px;font-size:18px;width: 61%;">Learn More</p>
             </div>`;
             $("#login-wrapper").append(lernmore);
             $("#loginbutton").val("Login");
