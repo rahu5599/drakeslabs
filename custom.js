@@ -593,7 +593,7 @@ $(function() {
                         <li class="new-customer-fact">Save items to your Wish List</li>
                     </ul>
                     <br>
-                    <a href="` + signupURL + `"><button class="button button--primary " style="margin-top: 75px;">Create Account</button></a>
+                    <a href="` + signupURL + `"><button class="button button--primary " style="margin-top: 75px;">Create an a   ccount</button></a>
                 </div>
             </div>
         </div>`;
