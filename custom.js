@@ -113,6 +113,7 @@ $(function() {
                 "border-bottom": "1px solid #FFFFFF",
                 "background": "transparent",
                 "width": "100%",
+                "border-radius": "0px",
                 "padding": "8px 4px",
                 "font-size": "19px",
                 "color": "#fff",
@@ -128,6 +129,7 @@ $(function() {
                 "background": "transparent",
                 "width": "100%",
                 "padding": "8px 4px",
+                "border-radius": "0px",
                 "font-size": "19px",
                 "color": "#fff",
                 "outline":"none"
